@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const server = axios.create({
-  baseURL: "http://localhost:5000",
+  baseURL: "https://calm-bastion-31992.herokuapp.com",
 });
 
 export default server;
