@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const defaultOptions = {
-  // baseURL: "http://localhost:5000/api/v1",
-  baseURL: "https://calm-bastion-31992.herokuapp.com/api/v1",
+  baseURL: "http://localhost:5000/api/v1",
+  // baseURL: "https://calm-bastion-31992.herokuapp.com/api/v1",
   headers: {
     "Content-Type": "application/json",
   },

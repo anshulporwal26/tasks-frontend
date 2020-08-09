@@ -3,13 +3,17 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import Tasks from "../pages/TaskScreen";
 import Login from "../pages/Login";
 import Signup from "../pages/Signup";
+import Navbar from "../components/layouts/Navbar";
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
     {...rest}
     render={(props) =>
       localStorage.getItem("auth:token") ? (
-        <Component {...props} />
+        <div>
+          <Navbar {...props} />
+          <Component {...props} />
+        </div>
       ) : (
         <Redirect
           to={{
