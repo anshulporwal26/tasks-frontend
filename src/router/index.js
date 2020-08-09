@@ -13,7 +13,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
       ) : (
         <Redirect
           to={{
-            pathname: "/",
+            pathname: "/login",
           }}
         />
       )
@@ -24,7 +24,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
 const MainRouter = (props) => {
   return (
     <Switch>
-      <Route exact path="/" component={Login} />
+      <PrivateRoute exact path="/" component={Tasks} />
       <Route exact path="/login" component={Login} />
       <Route exact path="/signup" component={Signup} />
       <PrivateRoute exact path="/tasks" component={Tasks} />
