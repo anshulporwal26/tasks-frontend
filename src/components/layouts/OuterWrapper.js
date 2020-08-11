@@ -41,11 +41,11 @@ const OuterWrapper = (props) => {
     <Grid container component="main" className={classes.root}>
       <CssBaseline />
       <Grid item xs={12} sm={4} md={6} className={classes.image}>
-        <img
+        {/* <img
           src={require("../../assets/outer-wrapper-image.png")}
           className={classes.brand}
           alt="Brand"
-        />
+        /> */}
       </Grid>
       <Grid
         item
